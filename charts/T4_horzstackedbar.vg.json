@@ -1,0 +1,61 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Distribution of Qualifications by Gender",
+    "width": 400,
+    "height": 300,
+    "data": {
+      "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T4.csv",
+      "format": {"type": "csv"}
+    },
+    "layer": [
+      {
+        "mark": "bar",
+        "encoding": {
+          "y": {
+            "field": "Qualification",
+            "type": "nominal",
+            "title": "Qualification"
+          },
+          "x": {
+            "field": "Number of Holders",
+            "type": "quantitative",
+            "title": "Number of Holders"
+          },
+          "color": {
+            "field": "Gender",
+            "scale": {
+              "domain": ["Male", "Female"],
+              "range": ["#1f77b4", "#ff7f0e"]
+            },
+            "title": "Gender"
+          }
+        }
+      },
+      {
+        "mark": "bar",
+        "encoding": {
+          "y": {
+            "field": "Qualification",
+            "type": "nominal"
+          },
+          "x": {
+            "aggregate": "sum",
+            "field": "Number of Holders",
+            "title": "Number of Holders"
+          },
+          "color": {
+            "field": "Gender",
+            "scale": {
+              "domain": ["Male", "Female"],
+              "range": ["#1f77b4", "#ff7f0e"]
+            }
+          }
+        }
+      }
+    ],
+    "config": {
+      "view": {"stroke": null},
+      "axis": {"grid": false}
+    }
+  }
+  

@@ -1,21 +1,21 @@
-﻿Gender,Qualification,Number of Holders
-Male,Information Technology,349430
-Male,Engineering and Related Technologies,1641014
-Male,Architecture and Building,629035
-Male,"Agriculture, Environmental and Related Studies",170111
-Male,Health,313534
-Male,Education,231740
-Male,Management and Commerce,1064793
-Male,Society and Culture,506840
-Male,Creative Arts,203629
-Male,"Food, Hospitality and Personal Services",231733
-Female,Information Technology,120892
-Female,Engineering and Related Technologies,151265
-Female,Architecture and Building,73930
-Female,"Agriculture, Environmental and Related Studies",79641
-Female,Health,1042396
-Female,Education,788632
-Female,Management and Commerce,1503901
-Female,Society and Culture,1086654
-Female,Creative Arts,303864
-Female,"Food, Hospitality and Personal Services",406284
+﻿Gender,Qualification,Number of Holders,Percentage
+Male,Information Technology,349430,74.29590791
+Male,Engineering and Related Technologies,1641014,91.56018678
+Male,Architecture and Building,629035,89.48311794
+Male,"Agriculture, Environmental and Related Studies",170111,68.11196707
+Male,Health,313534,23.12317008
+Male,Education,231740,22.71132489
+Male,Management and Commerce,1064793,41.45269931
+Male,Society and Culture,506840,31.80683454
+Male,Creative Arts,203629,40.12449433
+Male,"Food, Hospitality and Personal Services",231733,36.32081904
+Female,Information Technology,120892,25.70409209
+Female,Engineering and Related Technologies,151265,8.439813221
+Female,Architecture and Building,73930,10.51688206
+Female,"Agriculture, Environmental and Related Studies",79641,31.88803293
+Female,Health,1042396,76.87682992
+Female,Education,788632,77.28867511
+Female,Management and Commerce,1503901,58.54730069
+Female,Society and Culture,1086654,68.19316546
+Female,Creative Arts,303864,59.87550567
+Female,"Food, Hospitality and Personal Services",406284,63.67918096
