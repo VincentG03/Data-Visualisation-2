@@ -1,0 +1,31 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "data": {
+      "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T8.csv",
+      "format": {"type": "csv"}
+    },
+    "title": "Stacked Bar Chart of Qualifications by Birth Location",
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Qualification",
+        "type": "ordinal",
+        "title": "Qualification"
+      },
+      "y": {
+        "field": "Percentage",
+        "type": "quantitative",
+        "title": "Percentage"
+      },
+      "color": {
+        "field": "Birth Location",
+        "type": "nominal",
+        "title": "Birth Location",
+        "scale": {
+          "domain": ["Born in Australia", "Born Overseas"],
+          "range": ["#1f77b4", "#ff7f0e"]
+        }
+      }
+    }
+  }
+  
