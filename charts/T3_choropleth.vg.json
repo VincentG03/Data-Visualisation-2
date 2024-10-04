@@ -1,0 +1,53 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Distribution of Population with at Least a High School Education Across Australian States",
+    "width": 700,
+    "height": 400,
+    "projection": {"type": "mercator"},
+    "data": {
+      "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/aus_states.topojson",
+      "format": {"type": "topojson", "feature": "georef-australia-state@public"}
+    },
+    "transform": [
+      {
+        "lookup": "properties.ste_name",
+        "from": {
+          "data": {
+            "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T3.csv"
+          },
+          "key": "State",
+          "fields": ["Percentage of Total"]
+        }
+      }
+    ],
+    "layer": [
+      {
+        "mark": {
+          "type": "geoshape",
+          "stroke": "#000",
+          "strokeWidth": 0.5
+        },
+        "encoding": {
+          "color": {
+            "field": "Percentage of Total",
+            "type": "quantitative",
+            "scale": {"scheme": "blues"},
+            "title": "Percentage of Total"
+          },
+          "tooltip": [
+            {
+              "field": "properties.ste_name",
+              "title": "State"
+            },
+            {
+              "field": "Percentage of Total",
+              "title": "Percentage of Total",
+              "type": "quantitative",
+              "format": ".2f" 
+            }
+          ]
+        }
+      }
+    ]
+  }
+  
