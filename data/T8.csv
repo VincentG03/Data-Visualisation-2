@@ -1,11 +1,11 @@
-﻿Birth Location,Qualification,Percentage
-Born in Australia,Postgraduate Degree,7.662071836
-Born in Australia,Graduate Diploma,4.803777739
-Born in Australia,Bachelor Degree,28.55456416
-Born in Australia,Diploma,17.03657792
-Born in Australia,Certificate,41.94300834
-Born Overseas,Postgraduate Degree,19.46838877
-Born Overseas,Graduate Diploma,3.621717966
-Born Overseas,Bachelor Degree,37.40687365
-Born Overseas,Diploma,17.24586808
-Born Overseas,Certificate,22.25715153
+﻿Qualification,Birth Location,Percentage
+Postgraduate Degree,Born in Australia,40.59524091
+Postgraduate Degree,Born Overseas,59.40475909
+Graduate Diploma,Born in Australia,69.72507687
+Graduate Diploma,Born Overseas,30.27492313
+Bachelor Degree,Born in Australia,56.9974828
+Bachelor Degree,Born Overseas,43.0025172
+Diploma,Born in Australia,63.17138326
+Diploma,Born Overseas,36.82861674
+Certificate,Born in Australia,76.59235369
+Certificate,Born Overseas,23.40764631
