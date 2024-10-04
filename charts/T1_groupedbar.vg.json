@@ -1,0 +1,39 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "width": 700,
+    "height": 700,
+    "title": "Student Distribution by Education Type and School Type",
+    "data": {
+      "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T1.csv",
+      "format": {"type": "csv"}
+    },
+    "mark": "bar",
+    "encoding": {
+      "x": {
+        "field": "Education Type",
+        "type": "nominal",
+        "title": "Education Type",
+        "axis": {
+          "labelAngle": 0 
+        }
+      },
+      "y": {
+        "field": "Number of Students",
+        "type": "quantitative",
+        "title": "Number of Students"
+      },
+      "color": {
+        "field": "School Type",
+        "type": "nominal",
+        "title": "School Type",
+        "scale": {
+          "domain": ["Government", "Catholic", "Other non-Government"],
+          "range": ["#1f77b4", "#ff7f0e", "#2ca02c"]  
+        }
+      },
+      "xOffset": {
+        "field": "School Type"
+      }
+    }
+  }
+  
