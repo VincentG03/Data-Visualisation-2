@@ -13,7 +13,7 @@ body {
     display: grid;
     
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 50px 200px 100px;
+    grid-template-rows: 400px 200px 100px;
     gap: 15px;
 
     justify-items: stretch;
@@ -21,7 +21,8 @@ body {
 
 }
 
-/* Defining the div within the grid container */ 
+
+/* Style the divs in the overall grid container */ 
 .grid_container > div {
     background: #ccc;
     text-align: center;
@@ -29,18 +30,26 @@ body {
     border: 1px solid #777;
 }
 
-/* Get the first child */
+
+/* Style the Header */
+header {
+    max-width: 1500px; 
+    text-align: center;
+    margin: 40px auto;
+    background: lightblue;
+    border-bottom: 1px solid red;
+    border-top:
+}
+
+
+/* Style the individual div objects */
 .grid_container > div:nth-child(1) {
     grid-column: 1 / span 2; /* Start at column 1, span 2 columns */
 }
 
-
-/* Get the second child */
 .grid_container > div:nth-child(2) {
     grid-column: span 2; /* Start at column 1, span 2 columns */
 }
-
-
 
 .grid_container > div:nth-child(3) {
     grid-column: span 3; /* Start at column 1, span 2 columns */
@@ -55,7 +64,6 @@ body {
     align-self: end;
 }
 
-
 .grid_container > div:nth-child(6) {
     grid-column: span 2; /* Start at column 1, span 2 columns */
 }
@@ -63,13 +71,5 @@ body {
 
 
 
-/* Set styles for the header */
-header {
-    max-width: 1500px; 
-    text-align: center;
-    margin: 40px auto;
-    background: lightblue;
-    border-bottom: 1px solid red;
-}
 
 
