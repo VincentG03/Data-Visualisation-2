@@ -1,39 +1,39 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Number of People by Income Group and Qualification Type",
-    "width": 500,
-    "height": 300,
-    "data": {
-      "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T11.csv",
-      "format": {"type": "csv"}
-    },
-    "mark": "bar",
-    "encoding": {
-      "x": {
-        "field": "Income Group",
-        "type": "ordinal",
-        "title": "Income Group",
-        "axis": {
-          "labelAngle": 0
-        }
-      },
-      "y": {
-        "field": "Number of People",
-        "type": "quantitative",
-        "title": "Number of People"
-      },
-      "xOffset": {
-        "field": "Qualification Type"
-      },
-      "color": {
-        "field": "Qualification Type",
-        "type": "nominal",
-        "title": "Qualification Type"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Number of People by Income Group and Qualification Type",
+  "width": 500,
+  "height": 300,
+  "data": {
+    "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T11.csv",
+    "format": {"type": "csv"}
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Income Group",
+      "type": "ordinal",
+      "title": "Income Group",
+      "axis": {
+        "labelAngle": 0
       }
     },
-    "config": {
-      "view": {"stroke": null},
-      "axis": {"grid": false}
+    "xOffset": {
+      "field": "Qualification Type",
+      "title": "Qualification Type"
+    },
+    "y": {
+      "field": "Number of People",
+      "type": "quantitative",
+      "title": "Number of People"
+    },
+    "color": {
+      "field": "Qualification Type",
+      "type": "nominal",
+      "title": "Qualification Type"
     }
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false}
   }
-  
+}
