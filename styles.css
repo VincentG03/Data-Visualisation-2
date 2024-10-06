@@ -5,7 +5,6 @@ body {
     font-family: 'Lato', sans-serif;
 }
 
-
 /* Defining the grid container itself */ 
 .grid_container {
     background: white;
@@ -19,9 +18,7 @@ body {
 
     justify-items: stretch;
     align-items: stretch;
-
 }
-
 
 /* Style the divs in the overall grid container */ 
 .grid_container > div {
@@ -30,7 +27,6 @@ body {
     padding:10px;
     border: 1px solid #777; /* (!!!!!!!!!!!!!!!!!!) REMOVE THIS AFTER (!!!!!!!!!!!!!!!!!!) */
 }
-
 
 /* Title of the webpage */
 header {
@@ -49,23 +45,21 @@ header {
     font-weight: normal;
 }
 
+/* Headers for the section titles */
 h2 {
     font-size: 25px;
     font-weight: bold;
     margin: 5px
 }
 
+/* Styling for the descriptions of the charts */
 .description {
     font-size: 20px;
     font-weight: normal;
 }
 
 
-
-
-
-
-
+/* ----- VISUALISATIONS ----- */
 
 
 /* Choropleth */
@@ -123,31 +117,39 @@ h2 {
     grid-column: span 2; 
 }
 
+/* Pie Chart */
 .grid_container > div:nth-child(11) {
     grid-column: span 3; 
 }
 
+/* Percentaged Bar Chart of Qualifications by Gender */
 .grid_container > div:nth-child(12) {
     grid-column: span 3; 
 }
 
+/* Description: Pie Chart */
 .grid_container > div:nth-child(13) {
     grid-column: span 3; 
 }
 
+/* Description: Percentaged Bar Chart of Qualifications by Gender */
 .grid_container > div:nth-child(14) {
     grid-column: span 3; 
 }
 
+/* Grouped Bar Chart by Income Group*/
 .grid_container > div:nth-child(15) {
     grid-column: span 4; 
 }
 
+/* Description: Grouped Bar Chart by Income Group */
 .grid_container > div:nth-child(16) {
     grid-column: span 2; 
 }
 
+/* Footer of acknowledgements */
 .grid_container > div:nth-child(17) {
     grid-column: span 6; 
     font-size: 10px;
+    border: 0px;
 }
