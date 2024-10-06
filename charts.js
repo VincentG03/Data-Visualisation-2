@@ -22,7 +22,6 @@ var vg_6 = "chart/T6_pie.vg.json";
 vegaEmbed("#T6_pie", vg_6).then(function(result) { 
 }).catch(console.error);
 
-
 var vg_8 = "chart/T8_stackedbar.vg.json"; 
 vegaEmbed("#T8_stackedbar", vg_8).then(function(result) { 
 }).catch(console.error);

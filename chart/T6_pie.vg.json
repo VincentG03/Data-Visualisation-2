@@ -3,36 +3,100 @@
   "title": {
     "text": "Distribution of Qualification Types in Australia",
     "offset": 30
-            },
+  },
   "width": 550,
-  "height": 100,
+  "height": 300,
   "data": {
     "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T6.csv",
     "format": {"type": "csv"}
   },
-  "mark": {"type": "arc", "tooltip": true, "outerRadius": 150},
-  "encoding": {
-    "theta": {"field": "Percentage", "type": "quantitative"},
-    "order": {"field": "Percentage", "type": "quantitative", "sort": "descending"},
-    "color": {
-      "field": "Qualification Type",
-      "type": "nominal",
-      "scale": {
-        "domain": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"],
-        "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"]
-      },
-      "sort": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"]
-    },
-    "tooltip": [
-      {"field": "Qualification Type", "type": "nominal"},
-      {
-        "field": "Percentage",
-        "type": "quantitative",
-        "title": "Percentage",
-        "format": ".2f"
+  "layer": [
+    {
+      "mark": {"type": "arc", "tooltip": true, "outerRadius": 150},
+      "encoding": {
+        "theta": {"field": "Percentage", "type": "quantitative"},
+        "order": {"field": "Percentage", "type": "quantitative", "sort": "descending"},
+        "color": {
+          "field": "Qualification Type",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"],
+            "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"]
+          },
+          "sort": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"]
+        },
+        "tooltip": [
+          {"field": "Qualification Type", "type": "nominal"},
+          {
+            "field": "Percentage",
+            "type": "quantitative",
+            "title": "Percentage",
+            "format": ".2f"
+          }
+        ]
       }
-    ]
-  },
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "red"
+      },
+      "encoding": {
+        "x": {"value": 150},
+        "y": {"value": 30},
+        "text": {"value": "TEMP"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "red"
+      },
+      "encoding": {
+        "x": {"value": 300},
+        "y": {"value": 60},
+        "text": {"value": "TEMP"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "red"
+      },
+      "encoding": {
+        "x": {"value": 200},
+        "y": {"value": 150},
+        "text": {"value": "TEMP"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "red"
+      },
+      "encoding": {
+        "x": {"value": 100},
+        "y": {"value": 200},
+        "text": {"value": "TEMP"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "red"
+      },
+      "encoding": {
+        "x": {"value": 250},
+        "y": {"value": 100},
+        "text": {"value": "TEMP"}
+      }
+    }
+  ],
   "config": {
     "view": {"stroke": null},
     "axis": {"grid": false}
