@@ -71,7 +71,7 @@ h2 {
     grid-column: span 4 
 }
 
-/* Description: Choropleth */
+/* Description: Introduction */
 .grid_container > div:nth-child(3) {
     grid-column: span 2; 
     text-align: left;
