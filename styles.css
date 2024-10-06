@@ -1,0 +1,75 @@
+
+body {
+    margin: 30px;
+    background: white;
+}
+
+
+/* Defining the grid container itself */ 
+.grid_container {
+    background: #eee;
+    max-width: 1200px;
+    margin: 20px auto;
+    display: grid;
+    
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 50px 200px 100px;
+    gap: 15px;
+
+    justify-items: stretch;
+    align-items: stretch;
+
+}
+
+/* Defining the div within the grid container */ 
+.grid_container > div {
+    background: #ccc;
+    text-align: center;
+    padding: 20px;
+    border: 1px solid #777;
+}
+
+/* Get the first child */
+.grid_container > div:nth-child(1) {
+    grid-column: 1 / span 2; /* Start at column 1, span 2 columns */
+}
+
+
+/* Get the second child */
+.grid_container > div:nth-child(2) {
+    grid-column: span 2; /* Start at column 1, span 2 columns */
+}
+
+
+
+.grid_container > div:nth-child(3) {
+    grid-column: span 3; /* Start at column 1, span 2 columns */
+}
+
+.grid_container > div:nth-child(4) {
+    grid-column: span 1; /* Start at column 1, span 2 columns */
+}
+
+.grid_container > div:nth-child(5) {
+    grid-column: span 2; /* Start at column 1, span 2 columns */
+    align-self: end;
+}
+
+
+.grid_container > div:nth-child(6) {
+    grid-column: span 2; /* Start at column 1, span 2 columns */
+}
+
+
+
+
+/* Set styles for the header */
+header {
+    max-width: 1200px; 
+    text-align: center;
+    margin: 40px auto;
+    background: lightblue;
+    border-bottom: 1px solid red;
+}
+
+
