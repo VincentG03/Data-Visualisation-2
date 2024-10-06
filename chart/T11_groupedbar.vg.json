@@ -1,13 +1,20 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": "Number of People by Income Group and Qualification Type",
-  "width": 500,
-  "height": 300,
+  "width": 750,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T11.csv",
     "format": {"type": "csv"}
   },
   "mark": "bar",
+  "params": [
+    {
+      "name": "qual_param",
+      "select": {"type": "point", "fields": ["Qualification Type"]},
+      "bind": "legend"
+    }
+  ],
   "encoding": {
     "x": {
       "field": "Income Group",
@@ -19,7 +26,8 @@
     },
     "xOffset": {
       "field": "Qualification Type",
-      "title": "Qualification Type"
+      "title": "Qualification Type",
+      "sort": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"]
     },
     "y": {
       "field": "Number of People",
@@ -29,7 +37,16 @@
     "color": {
       "field": "Qualification Type",
       "type": "nominal",
-      "title": "Qualification Type"
+      "title": "Qualification Type",
+      "sort": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"],
+      "scale": {
+        "domain": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"], 
+        "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"] 
+      }
+    },
+    "opacity": {
+      "condition": {"param": "qual_param", "value": 1},
+      "value": 0.2
     }
   },
   "config": {

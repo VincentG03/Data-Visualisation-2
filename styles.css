@@ -14,7 +14,7 @@ body {
     display: grid;
     
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 500px 100px 400px 150px 100px 500px 400px 150px 40px;
+    grid-template-rows: 500px 100px 400px 150px 100px 500px 400px 150px 500px 40px;
     gap: 15px;
 
     justify-items: stretch;
@@ -140,5 +140,14 @@ h2 {
 }
 
 .grid_container > div:nth-child(15) {
+    grid-column: span 4; 
+}
+
+.grid_container > div:nth-child(16) {
+    grid-column: span 2; 
+}
+
+.grid_container > div:nth-child(17) {
     grid-column: span 6; 
+    font-size: 10px;
 }

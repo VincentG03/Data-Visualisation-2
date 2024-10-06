@@ -19,15 +19,10 @@
             "field": "Qualification Type",
             "type": "nominal",
             "scale": {
-              "domain": [
-                "Postgraduate Degree",
-                "Graduate Diploma",
-                "Bachelor Degree",
-                "Diploma",
-                "Certificate"
-              ],
+              "domain": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"],
               "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"]
-            }
+            },
+            "sort": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"]
           },
           "tooltip": [
             {"field": "Qualification Type", "type": "nominal"},
