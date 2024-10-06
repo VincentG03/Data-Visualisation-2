@@ -1,8 +1,11 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Distribution of Qualification Types in Australia",
-    "width": 400,
-    "height": 400,
+    "title": {
+      "text": "Distribution of Qualification Types in Australia",
+      "offset": 30
+              },
+    "width": 550,
+    "height": 100,
     "data": {
       "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T6.csv",
       "format": {"type": "csv"}
@@ -37,6 +40,10 @@
           ]
         }
       }
-    ]
+    ],
+    "config": {
+      "view": {"stroke": null},
+      "axis": {"grid": false}
+    }
   }
   

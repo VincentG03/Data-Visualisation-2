@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Number of People by Income Group and Qualification Type",
-    "width": 800,
-    "height": 400,
+    "width": 500,
+    "height": 300,
     "data": {
       "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T11.csv",
       "format": {"type": "csv"}
@@ -30,6 +30,10 @@
         "type": "nominal",
         "title": "Qualification Type"
       }
+    },
+    "config": {
+      "view": {"stroke": null},
+      "axis": {"grid": false}
     }
   }
   

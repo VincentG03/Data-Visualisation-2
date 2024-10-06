@@ -1,8 +1,8 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
     "title": "Distribution of Qualifications by Gender",
-    "width": 400,
-    "height": 300,
+    "width": 680,
+    "height": 410,
     "data": {
       "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T4.csv",
       "format": {"type": "csv"}
