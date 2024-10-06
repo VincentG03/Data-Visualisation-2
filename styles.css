@@ -1,13 +1,13 @@
 
 body {
     margin: 30px;
-    background: white;
+    background: #f5f5f5;
     font-family: 'Lato', sans-serif;
 }
 
 /* Defining the grid container itself */ 
 .grid_container {
-    background: white;
+    background: #f5f5f5;
     max-width: 1500px;
     margin: 20px auto;
     display: grid;
@@ -24,8 +24,9 @@ body {
 .grid_container > div {
     background: white;
     text-align: center;
+
     padding: 10px;
-    border: 2px solid lightgrey; /* (!!!!!!!!!!!!!!!!!!) REMOVE THIS AFTER (!!!!!!!!!!!!!!!!!!) */
+    border: 2px solid black; /* (!!!!!!!!!!!!!!!!!!) REMOVE THIS AFTER (!!!!!!!!!!!!!!!!!!) */
 }
 
 /* Title of the webpage */
@@ -103,6 +104,7 @@ h2 {
 /* Description: Stacked Bar Chart by School Type */
 .grid_container > div:nth-child(8) {
     grid-column: span 3; 
+    text-align: left;
 }
 
 /* Section Description */
