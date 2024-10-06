@@ -2,18 +2,19 @@
 body {
     margin: 30px;
     background: white;
+    font-family: 'Lato', sans-serif;
 }
 
 
 /* Defining the grid container itself */ 
 .grid_container {
-    background: #eee;
+    background: white;
     max-width: 1500px;
     margin: 20px auto;
     display: grid;
     
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 500px 80px 400px 150px 80px 500px 400px 150px 40px;
+    grid-template-rows: 500px 100px 400px 150px 100px 500px 400px 150px 40px;
     gap: 15px;
 
     justify-items: stretch;
@@ -24,61 +25,100 @@ body {
 
 /* Style the divs in the overall grid container */ 
 .grid_container > div {
-    background: #ccc;
+    background: white;
     text-align: center;
     padding:10px;
-    border: 1px solid #777;
+    border: 1px solid #777; /* (!!!!!!!!!!!!!!!!!!) REMOVE THIS AFTER (!!!!!!!!!!!!!!!!!!) */
 }
 
 
-/* Style the Header */
+/* Title of the webpage */
 header {
     max-width: 1500px; 
+    font-size: 20px;
     text-align: center;
     margin: 10px auto;
-    background: lightblue;
-    border-bottom: 1px solid red;
-    border-top: 1px solid red;
+    background: #cfe0e7;
+    border: 2px solid black; 
+}
+
+/* Subtitle under the title of the webpage */
+.subtitle {
+    font-size: 15px;
+    font-style: italic;
+    font-weight: normal;
+}
+
+h2 {
+    font-size: 25px;
+    font-weight: bold;
+    margin: 5px
+}
+
+.description {
+    font-size: 20px;
+    font-weight: normal;
 }
 
 
-/* Style the individual div objects */
+
+
+
+
+
+
+
+/* Choropleth */
 .grid_container > div:nth-child(1) {
     grid-column: span 4 
 }
 
+/* Description: Choropleth */
 .grid_container > div:nth-child(2) {
     grid-column: span 2; 
+    font-size: 20px;
 }
 
+/* Section Description */
 .grid_container > div:nth-child(3) {
     grid-column: span 6;
+    background: #cfe0e7;
+    border: 2px solid black; 
 }
 
+/* Stacked Bar Chart by Qualification */
 .grid_container > div:nth-child(4) {
     grid-column: span 3; 
 }
 
+/* Stacked Bar Chart by School Type */
 .grid_container > div:nth-child(5) {
     grid-column: span 3; 
 }
 
+/* Description: Stacked Bar Chart by Qualification */
 .grid_container > div:nth-child(6) {
     grid-column: span 3; 
 }
 
+/* Description: Stacked Bar Chart by School Type */
 .grid_container > div:nth-child(7) {
     grid-column: span 3; 
 }
 
+/* Section Description */
 .grid_container > div:nth-child(8) {
-    grid-column: span 6; 
+    grid-column: span 6;
+    background: #cfe0e7;
+    border: 2px solid black; 
 }
 
+/* Stacked Bar Chart of Gender by Study Field */
 .grid_container > div:nth-child(9) {
     grid-column: span 4; 
 }
 
+/* Description: Stacked Bar Chart of Gender by Study Field */
 .grid_container > div:nth-child(10) {
     grid-column: span 2; 
 }
