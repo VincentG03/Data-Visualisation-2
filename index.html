@@ -4,22 +4,80 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
+    <link rel="stylesheet" href = "styles.css">
+    <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
-    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
     <script src="charts.js"></script>
-
 </head>
 <body>
-    <h1>First Vega-Lite graph</h1>
-    <div id="T1_groupedbar"></div>
-    <div id="T3_choropleth"></div>
-    <div id="T4_horzpercentagebar"></div>
-    <div id="T4_horzstackedbar"></div>
-    <div id="T6_pie"></div>
-    <div id="T8_stackedbar"></div>
-    <div id="T11_groupedbar"></div>
+    <!-- Title Section -->
+    <header> 
+        <h1>Education Demographics in Australia</h1>
+        <h3 class = "subtitle">Understanding Australia's Educational Landscape and the Citizens Who Engage with It.</h3>
+    </header>
+
+    <main class = "grid_container"> 
+
+        <!-- "Choropleth" Section -->
+        <div id="T3_choropleth"></div>
+        <div>
+            <p class = "description"> Temporary</p>
+        </div>
+
+        <!-- "Education By Characteristics" Section -->
+        <div>
+            <h2>Education by Characteristics</h2>
+            <h3 class = "subtitle">Examining the Educational Characteristics Across Demographic Groups.</h3>
+        </div>
+
+        <div id="T8_stackedbar">4</div>
+        <div id="T1_groupedbar">5</div>
+        
+        <div>
+            <p class = "description">Temporary</p>
+        </div>
+        <div>
+            <p class = "description">Temporary</p>
+        </div>
+
+
+        <!-- "Education by Study Field" Section -->
+        <div>
+            <h2>Education by Study Field</h2>
+            <h3 class = "subtitle">Insights into the Distribution of Study Fields Across Citizens' Demographics.</h3>
+        </div>
+
+        <div id="T4_horzstackedbar"></div>
+
+        <div>
+            <p class = "description">Temporary</p>
+        </div>
+
+        <div id="T6_pie"></div>
+
+        <div id="T4_horzpercentagebar"></div>
+
+        <div>
+            <p class = "description">Temporary</p>
+        </div>
+        <div>
+            <p class = "description">Temporary</p>
+        </div>
+
+        <div id = "T11_groupedbar"></div>
+
+        <div>
+            <p class = "description">Temporary</p>
+        </div>
+
+        <div>
+            © Vincent Giang 2024 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; A visualisation created by <b>Vincent Giang</b> using Vega-Lite &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Last Updated 11 October 2024 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Data provided by the <b>Australian Bureau of Statistics</b> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; ChatGPT (GPT-3.5) was utilised to improve the wording of specific text segments   
+        </div>
+
+
+    </main>
 </body>
 </html>
