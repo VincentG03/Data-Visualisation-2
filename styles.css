@@ -14,7 +14,7 @@ body {
     
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
     grid-template-rows: 500px 100px 400px 150px 100px 500px 400px 150px 500px 40px;
-    gap: 15px;
+    gap: 10px;
 
     justify-items: stretch;
     align-items: stretch;
@@ -24,8 +24,8 @@ body {
 .grid_container > div {
     background: white;
     text-align: center;
-    padding:10px;
-    border: 1px solid #777; /* (!!!!!!!!!!!!!!!!!!) REMOVE THIS AFTER (!!!!!!!!!!!!!!!!!!) */
+    padding: 10px;
+    border: 2px solid lightgrey; /* (!!!!!!!!!!!!!!!!!!) REMOVE THIS AFTER (!!!!!!!!!!!!!!!!!!) */
 }
 
 /* Title of the webpage */
@@ -36,26 +36,27 @@ header {
     margin: 10px auto;
     background: #cfe0e7;
     border: 2px solid black; 
-}
+}   
 
 /* Subtitle under the title of the webpage */
 .subtitle {
-    font-size: 15px;
+    font-size: 20px;
     font-style: italic;
     font-weight: normal;
 }
 
 /* Headers for the section titles */
 h2 {
-    font-size: 25px;
+    font-size: 28px;
     font-weight: bold;
     margin: 5px
 }
 
 /* Styling for the descriptions of the charts */
 .description {
-    font-size: 20px;
+    font-size: 18px;
     font-weight: normal;
+    margin-top: 10px;
 }
 
 
@@ -70,10 +71,10 @@ h2 {
 /* Description: Choropleth */
 .grid_container > div:nth-child(2) {
     grid-column: span 2; 
-    font-size: 20px;
+    text-align: left;
 }
 
-/* Section Description */
+/* Section Title */
 .grid_container > div:nth-child(3) {
     grid-column: span 6;
     background: #cfe0e7;
@@ -88,11 +89,13 @@ h2 {
 /* Stacked Bar Chart by School Type */
 .grid_container > div:nth-child(5) {
     grid-column: span 3; 
+    
 }
 
 /* Description: Stacked Bar Chart by Qualification */
 .grid_container > div:nth-child(6) {
     grid-column: span 3; 
+    text-align: left;
 }
 
 /* Description: Stacked Bar Chart by School Type */

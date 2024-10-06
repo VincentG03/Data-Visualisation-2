@@ -1,0 +1,27 @@
+{
+    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+    "title": "Distribution of Qualification Type",
+    "height": 300,
+    "width": 400,
+    "data": {
+      "values": [
+        {"Qualification Type": "Certificate", "Percentage": 34.83997322},
+        {"Qualification Type": "Diploma", "Percentage": 17.11554044},
+        {"Qualification Type": "Bachelor Degree", "Percentage": 31.73224492},
+        {"Qualification Type": "Graduate Diploma", "Percentage": 4.360276192},
+        {"Qualification Type": "Postgraduate Degree", "Percentage": 11.95196524}
+      ]
+    },
+    "encoding": {
+      "theta": {"field": "Percentage", "type": "quantitative"},
+      "color": {"field": "Qualification Type", "type": "nominal", "legend": null}
+    },
+    "layer": [{
+      "mark": {"type": "arc", "outerRadius": 80}
+    }, {
+      "mark": {"type": "text", "radius": 130},
+      "encoding": {
+        "text": {"field": "Qualification Type", "type": "nominal"}
+      }
+    }]
+  }

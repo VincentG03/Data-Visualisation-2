@@ -1,45 +1,40 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-      "text": "Distribution of Qualification Types in Australia",
-      "offset": 30
-              },
-    "width": 550,
-    "height": 100,
-    "data": {
-      "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T6.csv",
-      "format": {"type": "csv"}
-    },
-    "layer": [
-      {
-        "mark": {"type": "arc", "tooltip": true, "outerRadius": 150},
-        "encoding": {
-          "theta": {"field": "Percentage", "type": "quantitative"},
-          "order": {"field": "Percentage", "type": "quantitative", "sort": "descending"},
-          "color": {
-            "field": "Qualification Type",
-            "type": "nominal",
-            "scale": {
-              "domain": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"],
-              "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"]
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Distribution of Qualification Types in Australia",
+    "offset": 30
             },
-            "sort": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"]
-          },
-          "tooltip": [
-            {"field": "Qualification Type", "type": "nominal"},
-            {
-              "field": "Percentage",
-              "type": "quantitative",
-              "title": "Percentage",
-              "format": ".2f"
-            }
-          ]
-        }
+  "width": 550,
+  "height": 100,
+  "data": {
+    "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T6.csv",
+    "format": {"type": "csv"}
+  },
+  "mark": {"type": "arc", "tooltip": true, "outerRadius": 150},
+  "encoding": {
+    "theta": {"field": "Percentage", "type": "quantitative"},
+    "order": {"field": "Percentage", "type": "quantitative", "sort": "descending"},
+    "color": {
+      "field": "Qualification Type",
+      "type": "nominal",
+      "scale": {
+        "domain": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"],
+        "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"]
+      },
+      "sort": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"]
+    },
+    "tooltip": [
+      {"field": "Qualification Type", "type": "nominal"},
+      {
+        "field": "Percentage",
+        "type": "quantitative",
+        "title": "Percentage",
+        "format": ".2f"
       }
-    ],
-    "config": {
-      "view": {"stroke": null},
-      "axis": {"grid": false}
-    }
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false}
   }
-  
+}
