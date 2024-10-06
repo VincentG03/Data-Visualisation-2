@@ -15,6 +15,7 @@
         "mark": {"type": "arc", "tooltip": true, "outerRadius": 150},
         "encoding": {
           "theta": {"field": "Percentage", "type": "quantitative"},
+          "order": {"field": "Percentage", "type": "quantitative", "sort": "descending"},
           "color": {
             "field": "Qualification Type",
             "type": "nominal",
