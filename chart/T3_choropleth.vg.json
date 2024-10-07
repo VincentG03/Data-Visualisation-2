@@ -1,62 +1,134 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": {
-      "text": "Distribution of Population with at Least a High School Education", 
-      "fontSize": 20,
-      "offset": 15,
-      "dx": 75
-    },
-    "width": 550,
-    "height": 430,
-    "projection": {"type": "mercator"},
-    "data": {
-      "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/aus_states.topojson",
-      "format": {"type": "topojson", "feature": "georef-australia-state@public"}
-    },
-    "transform": [
-      {
-        "lookup": "properties.ste_name",
-        "from": {
-          "data": {
-            "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T3.csv"
-          },
-          "key": "State",
-          "fields": ["Percentage of Total"]
-        }
-      }
-    ],
-    "layer": [
-      {
-        "mark": {
-          "type": "geoshape",
-          "stroke": "black",
-          "strokeWidth": 0.5
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Distribution of Population with at Least a High School Education",
+    "fontSize": 20,
+    "offset": 15,
+    "dx": 75
+  },
+  "width": 550,
+  "height": 430,
+  "projection": { "type": "mercator" },
+  "data": {
+    "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/aus_states.topojson",
+    "format": { "type": "topojson", "feature": "georef-australia-state@public" }
+  },
+  "transform": [
+    {
+      "lookup": "properties.ste_name",
+      "from": {
+        "data": {
+          "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T3.csv"
         },
-        "encoding": {
-          "color": {
-            "field": "Percentage of Total",
-            "type": "quantitative",
-            "scale": {"scheme": "blues"},
-            "title": "Percentage of Australia (%)"
-          },
-          "tooltip": [
-            {
-              "field": "properties.ste_name",
-              "title": "State"
-            },
-            {
-              "field": "Percentage of Total",
-              "title": "Percentage of Total",
-              "type": "quantitative",
-              "format": ".2f" 
-            }
-          ]
-        }
+        "key": "State",
+        "fields": ["Percentage of Total"]
       }
-    ],
-    "config": {
-      "view": {"stroke": null},
-      "axis": {"grid": false}
     }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "geoshape",
+        "stroke": "black",
+        "strokeWidth": 0.5
+      },
+      "encoding": {
+        "color": {
+          "field": "Percentage of Total",
+          "type": "quantitative",
+          "scale": { "scheme": "blues" },
+          "title": "Percentage of Australia (%)"
+        },
+        "tooltip": [
+          {
+            "field": "properties.ste_name",
+            "title": "State"
+          },
+          {
+            "field": "Percentage of Total",
+            "title": "Percentage of Total",
+            "type": "quantitative",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 590 },  
+        "y": { "value": 260 },  
+        "text": { "value": "Victoria and NSW are the two states with the" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 590 },  
+        "y": { "value": 275 },  
+        "text": { "value": "highest number of individuals holding at least" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 590 },  
+        "y": { "value": 290 },  
+        "text": { "value": "a high school qualification, collectively " }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 590 },  
+        "y": { "value": 305 },  
+        "text": { "value": "representing over 55% of all people in Australia" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 590 },  
+        "y": { "value": 320 },  
+        "text": { "value": " with at least this level of qualification." }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": { "value": 435 }, 
+        "x2": { "value": 485 },
+        "y": { "value": 340 },
+        "y2": { "value": 320 } 
+      }
+    }
+  ],
+  "config": {
+    "view": { "stroke": null },
+    "axis": { "grid": false }
   }
-  
+}
