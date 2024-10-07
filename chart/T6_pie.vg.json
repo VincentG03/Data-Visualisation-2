@@ -40,61 +40,61 @@
     {
       "mark": {
         "type": "text",
-        "fontSize": 12,
+        "fontSize": 15,
         "fill": "red"
       },
       "encoding": {
-        "x": {"value": 150},
-        "y": {"value": 30},
-        "text": {"value": "TEMP"}
+        "x": {"value": 560},
+        "y": {"value": 190},
+        "text": {"value": "Certificate"}
       }
     },
     {
       "mark": {
         "type": "text",
-        "fontSize": 12,
+        "fontSize": 15,
         "fill": "red"
       },
       "encoding": {
-        "x": {"value": 300},
-        "y": {"value": 60},
-        "text": {"value": "TEMP"}
+        "x": {"value": 220},
+        "y": {"value": 350},
+        "text": {"value": "Bachelor Degree"}
       }
     },
     {
       "mark": {
         "type": "text",
-        "fontSize": 12,
+        "fontSize": 15,
         "fill": "red"
       },
       "encoding": {
-        "x": {"value": 200},
+        "x": {"value": 170},
         "y": {"value": 150},
-        "text": {"value": "TEMP"}
+        "text": {"value": "Diploma"}
       }
     },
     {
       "mark": {
         "type": "text",
-        "fontSize": 12,
+        "fontSize": 15,
         "fill": "red"
       },
       "encoding": {
-        "x": {"value": 100},
-        "y": {"value": 200},
-        "text": {"value": "TEMP"}
+        "x": {"value": 400},
+        "y": {"value": 30},
+        "text": {"value": "Graduate Diploma"}
       }
     },
     {
       "mark": {
         "type": "text",
-        "fontSize": 12,
+        "fontSize": 15,
         "fill": "red"
       },
       "encoding": {
         "x": {"value": 250},
-        "y": {"value": 100},
-        "text": {"value": "TEMP"}
+        "y": {"value": 40},
+        "text": {"value": "Postgraduate Degree"}
       }
     }
   ],
