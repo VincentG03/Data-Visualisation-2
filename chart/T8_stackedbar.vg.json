@@ -16,7 +16,7 @@
     "y": {
       "field": "Qualification",
       "type": "ordinal",
-      "title": "Qualification"
+      "title": " "
     },
     "x": {
       "field": "Percentage",

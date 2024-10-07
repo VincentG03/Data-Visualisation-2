@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Study Fields by Gender", 
+    "text": "Distribution of Study Fields by Gender", 
     "fontSize": 20,
     "offset": 5
   },
