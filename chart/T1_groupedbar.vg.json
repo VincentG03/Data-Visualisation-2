@@ -11,50 +11,115 @@
     "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T1.csv",
     "format": {"type": "csv"}
   },
-  "mark": "bar",
-  "params": [
+  "layer": [
     {
-      "name": "school_type_param",
-      "select": {"type": "point", "fields": ["School Type"]},
-      "bind": "legend"
+      "mark": "bar",
+      "params": [
+        {
+          "name": "school_type_param",
+          "select": {"type": "point", "fields": ["School Type"]},
+          "bind": "legend"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Education Type",
+          "type": "nominal",
+          "title": "Education Type",
+          "axis": {
+            "labelAngle": 0 
+          }
+        },
+        "y": {
+          "field": "Number of Students",
+          "type": "quantitative",
+          "title": "Number of Students"
+        },
+        "color": {
+          "field": "School Type",
+          "type": "nominal",
+          "title": "School Type",
+          "scale": {
+            "domain": ["Government", "Catholic", "Other non-Government"],
+            "range": ["#c7c6b9", "#b7e396", "#9ADAEF"]
+          }
+        },
+        "xOffset": {
+          "field": "School Type"
+        },
+        "tooltip": [
+          {"field": "Education Type", "title": "School Level Type"},
+          {"field": "School Type", "title": "School Type"},
+          {"field": "Number of Students", "title": "Number of Students", "format": ","}
+        ],
+        "opacity": {
+          "condition": {"param": "school_type_param", "value": 1},
+          "value": 0.2
+        }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 340 },  
+        "y": { "value": 20 },  
+        "text": { "value": "There are more primary schools than secondary schools" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 340 },  
+        "y": { "value": 35 },  
+        "text": { "value": "reflecting the government's intention to provide younger" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 340 },  
+        "y": { "value": 50 },  
+        "text": { "value": "with accessible education close to home, given their" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 340 },  
+        "y": { "value": 65 },  
+        "text": { "value": " limited ability to travel independently." }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": { "value": 175 }, 
+        "x2": { "value": 235 },
+        "y": { "value": 90 },
+        "y2": { "value": 65 } 
+      }
     }
   ],
-  "encoding": {
-    "x": {
-      "field": "Education Type",
-      "type": "nominal",
-      "title": "Education Type",
-      "axis": {
-        "labelAngle": 0 
-      }
-    },
-    "y": {
-      "field": "Number of Students",
-      "type": "quantitative",
-      "title": "Number of Students"
-    },
-    "color": {
-      "field": "School Type",
-      "type": "nominal",
-      "title": "School Type",
-      "scale": {
-        "domain": ["Government", "Catholic", "Other non-Government"],
-        "range": ["#c7c6b9", "#b7e396", "#9ADAEF"]
-      }
-    },
-    "xOffset": {
-      "field": "School Type"
-    },
-    "tooltip": [
-      {"field": "Education Type", "title": "School Level Type"},
-      {"field": "School Type", "title": "School Type"},
-      {"field": "Number of Students", "title": "Number of Students", "format": ","}
-    ],
-    "opacity": {
-      "condition": {"param": "school_type_param", "value": 1},
-      "value": 0.2
-    }
-  },
   "config": {
     "view": {"stroke": null},
     "axis": {"grid": false}

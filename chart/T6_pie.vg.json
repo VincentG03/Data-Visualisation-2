@@ -104,6 +104,79 @@
         "y": {"value": 40},
         "text": {"value": "Postgraduate Degree"}
       }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 620 },  
+        "y": { "value": 250 },  
+        "text": { "value": " Certificates, the most common" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 610 },  
+        "y": { "value": 265 },  
+        "text": { "value": " qualification, surpasses the combined" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 610 },  
+        "y": { "value": 280 },  
+        "text": { "value": " percentage of the bottom three:" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 610 },  
+        "y": { "value": 295 },  
+        "text": { "value": "diplomas, postgraduate degrees, and" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 610 },  
+        "y": { "value": 310 },  
+        "text": { "value": "graduate diplomas." }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": { "value": 620 }, 
+        "x2": { "value": 560 },
+        "y": { "value": 240 },
+        "y2": { "value": 200 } 
+      }
     }
   ],
   "config": {

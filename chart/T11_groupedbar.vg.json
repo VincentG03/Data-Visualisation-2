@@ -10,54 +10,192 @@
     "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T11.csv",
     "format": {"type": "csv"}
   },
-  "mark": "bar",
-  "params": [
+  "layer": [
     {
-      "name": "qual_param",
-      "select": {"type": "point", "fields": ["Qualification Type"]},
-      "bind": "legend"
-    }
-  ],
-  "encoding": {
-    "x": {
-      "field": "Income Group",
-      "type": "ordinal",
-      "title": "Income Group",
-      "axis": {
-        "labelAngle": 0
-      },
-      "sort": ["$1 - $41,599", "$41,600 - $90,999", "$91,000 - $155,999", "$156,000 or more"]
-    },
-    "xOffset": {
-      "field": "Qualification Type",
-      "title": "Qualification Type",
-      "sort": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"]
-    },
-    "y": {
-      "field": "Number of People",
-      "type": "quantitative",
-      "title": "Number of People"
-    },
-    "color": {
-      "field": "Qualification Type",
-      "type": "nominal",
-      "title": "Qualification Type",
-      "sort": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"],
-      "scale": {
-        "domain": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"], 
-        "range": ["#779AED", "#8AD172 ", "#E4DA7A", "#F6A974", "#F0727C"] 
+      "mark": "bar",
+      "params": [
+        {
+          "name": "qual_param",
+          "select": {"type": "point", "fields": ["Qualification Type"]},
+          "bind": "legend"
+        }
+      ],
+      "encoding": {
+        "x": {
+          "field": "Income Group",
+          "type": "ordinal",
+          "title": "Income Group",
+          "axis": {
+            "labelAngle": 0
+          },
+          "sort": ["$1 - $41,599", "$41,600 - $90,999", "$91,000 - $155,999", "$156,000 or more"]
+        },
+        "xOffset": {
+          "field": "Qualification Type",
+          "title": "Qualification Type",
+          "sort": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"]
+        },
+        "y": {
+          "field": "Number of People",
+          "type": "quantitative",
+          "title": "Number of People"
+        },
+        "color": {
+          "field": "Qualification Type",
+          "type": "nominal",
+          "title": "Qualification Type",
+          "sort": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"],
+          "scale": {
+            "domain": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"], 
+            "range": ["#779AED", "#8AD172 ", "#E4DA7A", "#F6A974", "#F0727C"] 
+          }
+        },
+        "tooltip": [
+          {"field": "Qualification Type", "title": "Qualification Type"},
+          {"field": "Number of People", "title": "Number of People", "format": ","},
+          {"field": "Income Group", "title": "Income Group"}
+        ],
+        "opacity": {
+          "condition": {"param": "qual_param", "value": 1},
+          "value": 0.2
+        }
       }
     },
-    "tooltip": [
-      {"field": "Qualification Type", "title": "Qualification Type"},
-      {"field": "Number of People", "title": "Number of People", "format": ","},
-      {"field": "Income Group", "title": "Income Group"}
-    ],
-    "opacity": {
-      "condition": {"param": "qual_param", "value": 1},
-      "value": 0.2
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 660 },  
+        "y": { "value": 200 },  
+        "text": { "value": "Among those earning $156,000 or more, a " }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 660 },  
+        "y": { "value": 215 },  
+        "text": { "value": "notable proportion hold postgraduate degrees, " }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 660 },  
+        "y": { "value": 230 },  
+        "text": { "value": "significantly outnumbering bachelor's degree " }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 660 },  
+        "y": { "value": 245 },  
+        "text": { "value": "holders despite nearly three times as many people" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 660 },  
+        "y": { "value": 260 },  
+        "text": { "value": "having bachelor's degrees." }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": { "value": 660 }, 
+        "x2": { "value": 660 },
+        "y": { "value": 310 },
+        "y2": { "value": 270 } 
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 120 },  
+        "y": { "value": 150 },  
+        "text": { "value": "Individuals with graduate diplomas" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 120 },  
+        "y": { "value": 165 },  
+        "text": { "value": "earning between $0 and $41,599" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 120 },  
+        "y": { "value": 180 },  
+        "text": { "value": "constituted the smallest group" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 120 },  
+        "y": { "value": 195 },  
+        "text": { "value": "at 48,275 people." }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": { "value": 170 }, 
+        "x2": { "value": 120 },
+        "y": { "value": 375 },
+        "y2": { "value": 205 } 
+      }
     }
-  },
+  ],
   "config": {
     "view": {"stroke": null},
     "axis": {"grid": false}
