@@ -13,7 +13,10 @@
   },
   "layer": [
     {
-      "mark": {"type": "arc", "tooltip": true, "outerRadius": 150},
+      "mark": {
+        "type": "arc",
+        "outerRadius": 150       
+      },
       "encoding": {
         "theta": {"field": "Percentage", "type": "quantitative"},
         "order": {"field": "Percentage", "type": "quantitative", "sort": "descending"},
@@ -22,7 +25,7 @@
           "type": "nominal",
           "scale": {
             "domain": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"],
-            "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"]
+            "range": ["#779AED", "#8AD172", "#E4DA7A", "#F6A974", "#F0727C"]
           },
           "legend": null
         },
@@ -41,7 +44,8 @@
       "mark": {
         "type": "text",
         "fontSize": 15,
-        "fill": "red"
+        "fill": "#779AED",
+        "fontWeight": "bold"
       },
       "encoding": {
         "x": {"value": 560},
@@ -53,7 +57,8 @@
       "mark": {
         "type": "text",
         "fontSize": 15,
-        "fill": "red"
+        "fill": "#E4DA7A",
+        "fontWeight": "bold"
       },
       "encoding": {
         "x": {"value": 220},
@@ -65,7 +70,8 @@
       "mark": {
         "type": "text",
         "fontSize": 15,
-        "fill": "red"
+        "fill": "#8AD172",
+        "fontWeight": "bold"
       },
       "encoding": {
         "x": {"value": 170},
@@ -77,7 +83,8 @@
       "mark": {
         "type": "text",
         "fontSize": 15,
-        "fill": "red"
+        "fill": "#F6A974",
+        "fontWeight": "bold"
       },
       "encoding": {
         "x": {"value": 400},
@@ -89,7 +96,8 @@
       "mark": {
         "type": "text",
         "fontSize": 15,
-        "fill": "red"
+        "fill": "#F0727C",
+        "fontWeight": "bold"
       },
       "encoding": {
         "x": {"value": 250},

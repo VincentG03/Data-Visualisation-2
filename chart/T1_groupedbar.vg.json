@@ -12,6 +12,13 @@
     "format": {"type": "csv"}
   },
   "mark": "bar",
+  "params": [
+    {
+      "name": "school_type_param",
+      "select": {"type": "point", "fields": ["School Type"]},
+      "bind": "legend"
+    }
+  ],
   "encoding": {
     "x": {
       "field": "Education Type",
@@ -32,7 +39,7 @@
       "title": "School Type",
       "scale": {
         "domain": ["Government", "Catholic", "Other non-Government"],
-        "range": ["#1f77b4", "#ff7f0e", "#2ca02c"]  
+        "range": ["#c7c6b9", "#b7e396", "#9ADAEF"]
       }
     },
     "xOffset": {
@@ -42,8 +49,11 @@
       {"field": "Education Type", "title": "School Level Type"},
       {"field": "School Type", "title": "School Type"},
       {"field": "Number of Students", "title": "Number of Students", "format": ","}
-      
-    ]
+    ],
+    "opacity": {
+      "condition": {"param": "school_type_param", "value": 1},
+      "value": 0.2
+    }
   },
   "config": {
     "view": {"stroke": null},

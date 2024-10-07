@@ -29,7 +29,7 @@
       "title": "Birth Location",
       "scale": {
         "domain": ["Born in Australia", "Born Overseas"],
-        "range": ["#1f77b4", "#ff7f0e"]
+        "range": ["#84d1ba", "#e394cf"]
       }
     },
     "tooltip": [

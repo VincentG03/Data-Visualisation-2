@@ -41,7 +41,7 @@
       "field": "Gender",
       "scale": {
         "domain": ["Male", "Female"],
-        "range": ["#1f77b4", "#ff7f0e"]
+        "range": ["#86bfbe", "#B385C7"]
       },
       "title": "Gender"
     },
