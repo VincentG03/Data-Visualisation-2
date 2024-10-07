@@ -5,7 +5,7 @@
     "fontSize": 20,
     "offset": 5
   },
-  "width": 690,
+  "width": 670,
   "height": 410,
   "data": {
     "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T4.csv",
@@ -43,7 +43,7 @@
         "domain": ["Male", "Female"],
         "range": ["#86bfbe", "#B385C7"]
       },
-      "title": "Gender"
+      "title": "Gender (Filter)"
     },
     "tooltip": [
       {"field": "Qualification", "title": "Study Field"},

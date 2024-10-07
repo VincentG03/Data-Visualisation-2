@@ -38,7 +38,7 @@
         "color": {
           "field": "School Type",
           "type": "nominal",
-          "title": "School Type",
+          "title": "School Type (Filter)",
           "scale": {
             "domain": ["Government", "Catholic", "Other non-Government"],
             "range": ["#c7c6b9", "#b7e396", "#9ADAEF"]
