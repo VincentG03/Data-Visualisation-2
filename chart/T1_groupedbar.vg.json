@@ -1,8 +1,12 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 500,
+    "width": 510,
     "height": 300,
-    "title": "Student Distribution by Education Type and School Type",
+    "title": {
+      "text": "Student Distribution by Education Type and School Type", 
+      "fontSize": 20,
+      "offset": 15
+    },
     "data": {
       "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T1.csv",
       "format": {"type": "csv"}

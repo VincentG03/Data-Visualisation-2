@@ -1,8 +1,13 @@
 {
     "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "title": "Distribution of Population with at Least a High School Education Across Australian States",
-    "width": 600,
-    "height": 450,
+    "title": {
+      "text": "Distribution of Population with at Least a High School Education", 
+      "fontSize": 20,
+      "offset": 15,
+      "dx": 75
+    },
+    "width": 550,
+    "height": 430,
     "projection": {"type": "mercator"},
     "data": {
       "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/aus_states.topojson",

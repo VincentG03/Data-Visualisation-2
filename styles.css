@@ -13,7 +13,7 @@ body {
     display: grid;
     
     grid-template-columns: 1fr 1fr 1fr 1fr 1fr 1fr;
-    grid-template-rows: 120px 500px 100px 400px 150px 100px 500px 400px 150px 500px 40px;
+    grid-template-rows: 120px 150px 500px 150px 100px 400px 150px 100px 500px 500px 40px;
     gap: 10px;
 
     justify-items: stretch;
@@ -45,7 +45,7 @@ h1 {
 
 /* Headers for the section titles */
 h2 {
-    font-size: 25px;
+    font-size: 28px;
     font-weight: bold;
     margin: 5px
 }
@@ -66,96 +66,95 @@ h2 {
     border: 2px solid black; 
 }
 
-/* Choropleth */
+/* Introduction */
 .grid_container > div:nth-child(2) {
+    grid-column: span 6;
+    text-align: left;
+}
+
+
+/* Choropleth */
+.grid_container > div:nth-child(3) {
     grid-column: span 3;
 }
 
-/* Description: Introduction */
-.grid_container > div:nth-child(3) {
+/* Pie Chart */
+.grid_container > div:nth-child(4) {
     grid-column: span 3; 
     text-align: left;
 }
 
+/* Desctiption: Choropleth */
+.grid_container > div:nth-child(5) {
+    grid-column: span 3;
+    text-align: left;
+}
+
+/* Description: Pie Chart */
+.grid_container > div:nth-child(6) {
+    grid-column: span 3;
+    text-align: left;
+}
+
 /* Section Title */
-.grid_container > div:nth-child(4) {
+.grid_container > div:nth-child(7) {
     grid-column: span 6;
     background: #cfe0e7;
     border: 2px solid black; 
 }
 
 /* Stacked Bar Chart by Qualification */
-.grid_container > div:nth-child(5) {
+.grid_container > div:nth-child(8) {
     grid-column: span 3; 
 }
 
 /* Stacked Bar Chart by School Type */
-.grid_container > div:nth-child(6) {
+.grid_container > div:nth-child(9) {
     grid-column: span 3; 
     
 }
 
 /* Description: Stacked Bar Chart by Qualification */
-.grid_container > div:nth-child(7) {
+.grid_container > div:nth-child(10) {
     grid-column: span 3; 
     text-align: left;
 }
 
 /* Description: Stacked Bar Chart by School Type */
-.grid_container > div:nth-child(8) {
+.grid_container > div:nth-child(11) {
     grid-column: span 3; 
     text-align: left;
 }
 
 /* Section Description */
-.grid_container > div:nth-child(9) {
+.grid_container > div:nth-child(12) {
     grid-column: span 6;
     background: #cfe0e7;
     border: 2px solid black; 
 }
 
 /* Stacked Bar Chart of Gender by Study Field */
-.grid_container > div:nth-child(10) {
+.grid_container > div:nth-child(13) {
     grid-column: span 4; 
 }
 
 /* Description: Stacked Bar Chart of Gender by Study Field */
-.grid_container > div:nth-child(11) {
+.grid_container > div:nth-child(14) {
     grid-column: span 2; 
 }
 
 /* Pie Chart */
-.grid_container > div:nth-child(12) {
-    grid-column: span 3; 
+.grid_container > div:nth-child(15) {
+    grid-column: span 2; 
 }
 
 /* Percentaged Bar Chart of Qualifications by Gender */
-.grid_container > div:nth-child(13) {
-    grid-column: span 3; 
-}
-
-/* Description: Pie Chart */
-.grid_container > div:nth-child(14) {
-    grid-column: span 3; 
-}
-
-/* Description: Percentaged Bar Chart of Qualifications by Gender */
-.grid_container > div:nth-child(15) {
-    grid-column: span 3; 
-}
-
-/* Grouped Bar Chart by Income Group*/
 .grid_container > div:nth-child(16) {
     grid-column: span 4; 
 }
 
-/* Description: Grouped Bar Chart by Income Group */
-.grid_container > div:nth-child(17) {
-    grid-column: span 2; 
-}
-
 /* Footer of acknowledgements */
-.grid_container > div:nth-child(18) {
+.grid_container > div:nth-child(17) {
     grid-column: span 6; 
     font-size: 11px;
     border: 0px;

@@ -1,6 +1,9 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "title": "Distribution of Qualifications by Gender",
+  "title": {
+    "text": "Distribution of Qualifications by Gender", 
+    "fontSize": 20
+  },
   "width": 400,
   "height": 300,
   "data": {

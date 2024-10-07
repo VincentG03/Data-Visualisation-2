@@ -2,10 +2,11 @@
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
     "text": "Distribution of Qualification Types in Australia",
-    "offset": 30
+    "offset": 30,
+    "fontSize": 20
   },
-  "width": 550,
-  "height": 300,
+  "width": 720,
+  "height": 400,
   "data": {
     "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T6.csv",
     "format": {"type": "csv"}
@@ -23,7 +24,7 @@
             "domain": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"],
             "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"]
           },
-          "sort": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"]
+          "legend": null
         },
         "tooltip": [
           {"field": "Qualification Type", "type": "nominal"},
