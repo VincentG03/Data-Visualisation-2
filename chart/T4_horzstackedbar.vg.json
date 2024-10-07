@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Distribution of Qualifications by Gender", 
+    "text": "Study Fields by Gender", 
     "fontSize": 20,
     "offset": 5
   },
@@ -30,7 +30,7 @@
     "y": {
       "field": "Qualification",
       "type": "nominal",
-      "title": "Qualification"
+      "title": "  "
     },
     "x": {
       "field": "Number of Holders",
@@ -44,7 +44,12 @@
         "range": ["#1f77b4", "#ff7f0e"]
       },
       "title": "Gender"
-    }
+    },
+    "tooltip": [
+      {"field": "Qualification", "title": "Study Field"},
+      {"field": "Number of Holders", "title": "Number of Holders", "format": ","},
+      {"field": "Gender", "title": "Gender"}
+    ]
   },
   "config": {
     "view": {"stroke": null},

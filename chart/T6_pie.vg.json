@@ -31,7 +31,7 @@
           {
             "field": "Percentage",
             "type": "quantitative",
-            "title": "Percentage",
+            "title": "Percentage (%)",
             "format": ".2f"
           }
         ]

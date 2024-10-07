@@ -8,33 +8,38 @@
     "offset": 15
   },
   "data": {
-      "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T8.csv",
-      "format": {"type": "csv"}
+    "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T8.csv",
+    "format": {"type": "csv"}
   },
   "mark": "bar",
   "encoding": {
-      "y": {
-          "field": "Qualification",
-          "type": "ordinal",
-          "title": "Qualification"
-      },
-      "x": {
-          "field": "Percentage",
-          "type": "quantitative",
-          "title": "Percentage"
-      },
-      "color": {
-          "field": "Birth Location",
-          "type": "nominal",
-          "title": "Birth Location",
-          "scale": {
-              "domain": ["Born in Australia", "Born Overseas"],
-              "range": ["#1f77b4", "#ff7f0e"]
-          }
+    "y": {
+      "field": "Qualification",
+      "type": "ordinal",
+      "title": "Qualification"
+    },
+    "x": {
+      "field": "Percentage",
+      "type": "quantitative",
+      "title": "Percentage"
+    },
+    "color": {
+      "field": "Birth Location",
+      "type": "nominal",
+      "title": "Birth Location",
+      "scale": {
+        "domain": ["Born in Australia", "Born Overseas"],
+        "range": ["#1f77b4", "#ff7f0e"]
       }
+    },
+    "tooltip": [
+      {"field": "Qualification", "title": "Qualification"},
+      {"field": "Percentage", "title": "Percentage (%)", "format": ".2f"},
+      {"field": "Birth Location", "title": "Birth Location"}
+    ]
   },
   "config": {
-      "view": {"stroke": null},
-      "axis": {"grid": false}
-    }
+    "view": {"stroke": null},
+    "axis": {"grid": false}
+  }
 }

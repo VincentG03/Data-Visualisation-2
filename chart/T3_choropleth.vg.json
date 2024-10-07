@@ -37,7 +37,7 @@
             "field": "Percentage of Total",
             "type": "quantitative",
             "scale": {"scheme": "blues"},
-            "title": "Percentage of Total"
+            "title": "Percentage of Australia (%)"
           },
           "tooltip": [
             {

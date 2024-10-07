@@ -3,7 +3,7 @@
   "title": {
     "text": "Number of People by Income Group and Qualification Type", 
     "fontSize": 20
-            },
+  },
   "width": 770,
   "height": 410,
   "data": {
@@ -48,6 +48,11 @@
         "range": ["#1f77b4", "#ff7f0e", "#2ca02c", "#d62728", "#9467bd"] 
       }
     },
+    "tooltip": [
+      {"field": "Qualification Type", "title": "Qualification Type"},
+      {"field": "Number of People", "title": "Number of People", "format": ","},
+      {"field": "Income Group", "title": "Income Group"}
+    ],
     "opacity": {
       "condition": {"param": "qual_param", "value": 1},
       "value": 0.2

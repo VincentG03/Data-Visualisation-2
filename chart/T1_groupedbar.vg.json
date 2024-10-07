@@ -1,47 +1,52 @@
 {
-    "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-    "width": 510,
-    "height": 300,
-    "title": {
-      "text": "Student Distribution by Education Type and School Type", 
-      "fontSize": 20,
-      "offset": 15
-    },
-    "data": {
-      "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T1.csv",
-      "format": {"type": "csv"}
-    },
-    "mark": "bar",
-    "encoding": {
-      "x": {
-        "field": "Education Type",
-        "type": "nominal",
-        "title": "Education Type",
-        "axis": {
-          "labelAngle": 0 
-        }
-      },
-      "y": {
-        "field": "Number of Students",
-        "type": "quantitative",
-        "title": "Number of Students"
-      },
-      "color": {
-        "field": "School Type",
-        "type": "nominal",
-        "title": "School Type",
-        "scale": {
-          "domain": ["Government", "Catholic", "Other non-Government"],
-          "range": ["#1f77b4", "#ff7f0e", "#2ca02c"]  
-        }
-      },
-      "xOffset": {
-        "field": "School Type"
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 510,
+  "height": 300,
+  "title": {
+    "text": "Student Distribution by Education Type and School Type", 
+    "fontSize": 20,
+    "offset": 15
+  },
+  "data": {
+    "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T1.csv",
+    "format": {"type": "csv"}
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Education Type",
+      "type": "nominal",
+      "title": "Education Type",
+      "axis": {
+        "labelAngle": 0 
       }
     },
-    "config": {
-      "view": {"stroke": null},
-      "axis": {"grid": false}
-    }
+    "y": {
+      "field": "Number of Students",
+      "type": "quantitative",
+      "title": "Number of Students"
+    },
+    "color": {
+      "field": "School Type",
+      "type": "nominal",
+      "title": "School Type",
+      "scale": {
+        "domain": ["Government", "Catholic", "Other non-Government"],
+        "range": ["#1f77b4", "#ff7f0e", "#2ca02c"]  
+      }
+    },
+    "xOffset": {
+      "field": "School Type"
+    },
+    "tooltip": [
+      {"field": "Education Type", "title": "School Level Type"},
+      {"field": "School Type", "title": "School Type"},
+      {"field": "Number of Students", "title": "Number of Students", "format": ","}
+      
+    ]
+  },
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false}
   }
-  
+}
