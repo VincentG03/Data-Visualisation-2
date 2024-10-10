@@ -1,0 +1,322 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": "Distribution of Qualification Types in Australia",
+    "offset": 30,
+    "fontSize": 20
+  },
+  "width": 720,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T6.csv",
+    "format": {"type": "csv"}
+  },
+  "transform": [
+    {
+      "calculate": "datum['Percentage'] * 0.01",
+      "as": "Decimal Percentage"
+    }
+  ],
+  "layer": [
+    {
+      "mark": {
+        "type": "arc",
+        "innerRadius": 50,
+        "stroke": "#fff"
+      },
+      "encoding": {
+        "theta": {
+          "field": "Decimal Percentage",
+          "type": "quantitative",
+          "stack": true
+        },
+        "radius": {
+          "field": "Decimal Percentage",
+          "scale": {"type": "sqrt", "zero": true, "rangeMin": 50}
+        },
+        "color": {
+          "field": "Qualification Type",
+          "type": "nominal",
+          "scale": {
+            "domain": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"],
+            "range": ["#779AED", "#8AD172", "#E4DA7A", "#F6A974", "#F0727C"]
+          },
+          "legend": null
+        },
+        
+        "order": {
+          "field": "Decimal Percentage",
+          "type": "quantitative",
+          "sort": "descending"
+        },
+        "tooltip": [
+          {"field": "Qualification Type", "type": "nominal"},
+          {
+            "field": "Percentage",
+            "type": "quantitative",
+            "title": "Percentage (%)",
+            "format": ".2f"
+          }
+        ]
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": { "value": 347 },
+        "x2": { "value": 335 },
+        "y": { "value": 97 },
+        "y2": { "value": 20 }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": { "value": 278 },
+        "x2": { "value": 260 },
+        "y": { "value": 90 },
+        "y2": { "value": 70 }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": { "value": 205 },
+        "x2": { "value": 160 },
+        "y": { "value": 200 },
+        "y2": { "value": 200 }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": { "value": 490 },
+        "x2": { "value": 470 },
+        "y": { "value": 370 },
+        "y2": { "value": 357 }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": { "value": 530 },
+        "x2": { "value": 511 },
+        "y": { "value": 50 },
+        "y2": { "value": 70 }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": { "value": 530 },
+        "x2": { "value": 555 },
+        "y": { "value": 50 },
+        "y2": { "value": 50 }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": { "value": 490 },
+        "x2": { "value": 520 },
+        "y": { "value": 370 },
+        "y2": { "value": 370 }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": { "value": 260 },
+        "x2": { "value": 230 },
+        "y": { "value": 70 },
+        "y2": { "value": 70 }
+      }
+    },
+    {
+      "mark": {
+        "type": "rule",
+        "color": "black",
+        "strokeWidth": 2
+      },
+      "encoding": {
+        "x": { "value": 335 },
+        "x2": { "value": 305 },
+        "y": { "value": 20 },
+        "y2": { "value": 20 }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 15,
+        "fill": "#779AED",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {"value": 627},
+        "y": {"value": 50},
+        "text": {"value": "Certificate - 34.84%"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 15,
+        "fill": "#E4DA7A",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {"value": 615},
+        "y": {"value": 370},
+        "text": {"value": "Bachelor Degree - 31.73%"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 15,
+        "fill": "#8AD172",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {"value": 95},
+        "y": {"value": 200},
+        "text": {"value": "Diploma - 17.12%"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 15,
+        "fill": "#F6A974",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {"value": 210},
+        "y": {"value": 20},
+        "text": {"value": "Graduate Diploma - 4.36%"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 15,
+        "fill": "#F0727C",
+        "fontWeight": "bold"
+      },
+      "encoding": {
+        "x": {"value": 120},
+        "y": {"value": 70},
+        "text": {"value": "Postgraduate Degree - 11.95%"}
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 630 },  
+        "y": { "value": 120 },  
+        "text": { "value": "Certificates, the most common" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 630 },  
+        "y": { "value": 135 },  
+        "text": { "value": "qualification, surpasses the" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 635 },  
+        "y": { "value": 150 },  
+        "text": { "value": "combined percentage of the" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 630 },  
+        "y": { "value": 165 },  
+        "text": { "value": "bottom three: diplomas" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 640 },  
+        "y": { "value": 180 },  
+        "text": { "value": "postgraduate degrees, and" }
+      }
+    },
+    {
+      "mark": {
+        "type": "text",
+        "fontSize": 12,
+        "fill": "black"
+      },
+      "encoding": {
+        "x": { "value": 625 },  
+        "y": { "value": 195 },  
+        "text": { "value": "graduate diplomas." }
+      }
+    }
+  ],
+  "config": {
+    "view": {"stroke": null},
+    "axis": {"grid": false}
+  }
+}

@@ -14,8 +14,8 @@ var vg_4_2 = "chart/T4_horzstackedbar.vg.json";
 vegaEmbed("#T4_horzstackedbar", vg_4_2).then(function(result) { 
 }).catch(console.error);
 
-var vg_6 = "chart/T6_pie.vg.json"; 
-vegaEmbed("#T6_pie", vg_6).then(function(result) { 
+var vg_6 = "chart/T6_radial.vg.json"; 
+vegaEmbed("#T6_radial", vg_6).then(function(result) { 
 }).catch(console.error);
 
 var vg_8 = "chart/T8_stackedbar.vg.json"; 
