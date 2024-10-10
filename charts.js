@@ -1,5 +1,5 @@
-var vg_1 = "chart/T1_groupedbar.vg.json"; 
-vegaEmbed("#T1_groupedbar", vg_1).then(function(result) { 
+var vg_1 = "chart/T1_populationpyramid.vg.json"; 
+vegaEmbed("#T1_populationpyramid", vg_1).then(function(result) { 
 }).catch(console.error);
 
 var vg_3 = "chart/T3_choropleth.vg.json"; 
