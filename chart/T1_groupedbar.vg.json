@@ -1,127 +1,81 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
-  "width": 510,
-  "height": 300,
   "title": {
-    "text": "Student Distribution by Education Type and School Type", 
+    "text": "Student Distribution by Education Type and School Type",
     "fontSize": 20,
     "offset": 15
   },
+  "width": 700,
+  "height": 300,
   "data": {
-    "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T1.csv",
-    "format": {"type": "csv"}
+    "url": "https://raw.githubusercontent.com/VincentG03/Data-Visualisation-2/refs/heads/main/data/T1.csv"
   },
-  "layer": [
+  "transform": [
     {
-      "mark": "bar",
-      "params": [
-        {
-          "name": "school_type_param",
-          "select": {"type": "point", "fields": ["School Type"]},
-          "bind": "legend"
-        }
-      ],
-      "encoding": {
-        "x": {
-          "field": "Education Type",
-          "type": "nominal",
-          "title": "Education Type",
-          "axis": {
-            "labelAngle": 0 
-          }
-        },
-        "y": {
-          "field": "Number of Students",
-          "type": "quantitative",
-          "title": "Number of Students"
-        },
-        "color": {
-          "field": "School Type",
-          "type": "nominal",
-          "title": "School Type (Filter)",
-          "scale": {
-            "domain": ["Government", "Catholic", "Other non-Government"],
-            "range": ["#c7c6b9", "#b7e396", "#9ADAEF"]
-          }
-        },
-        "xOffset": {
-          "field": "School Type"
-        },
-        "tooltip": [
-          {"field": "Education Type", "title": "School Level Type"},
-          {"field": "School Type", "title": "School Type"},
-          {"field": "Number of Students", "title": "Number of Students", "format": ","}
-        ],
-        "opacity": {
-          "condition": {"param": "school_type_param", "value": 1},
-          "value": 0.2
-        }
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "fontSize": 12,
-        "fill": "black"
-      },
-      "encoding": {
-        "x": { "value": 340 },  
-        "y": { "value": 20 },  
-        "text": { "value": "There are more primary schools than secondary schools" }
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "fontSize": 12,
-        "fill": "black"
-      },
-      "encoding": {
-        "x": { "value": 340 },  
-        "y": { "value": 35 },  
-        "text": { "value": "reflecting the government's intention to provide younger" }
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "fontSize": 12,
-        "fill": "black"
-      },
-      "encoding": {
-        "x": { "value": 340 },  
-        "y": { "value": 50 },  
-        "text": { "value": "students with accessible education close to home, given their" }
-      }
-    },
-    {
-      "mark": {
-        "type": "text",
-        "fontSize": 12,
-        "fill": "black"
-      },
-      "encoding": {
-        "x": { "value": 340 },  
-        "y": { "value": 65 },  
-        "text": { "value": " limited ability to travel independently." }
-      }
-    },
-    {
-      "mark": {
-        "type": "rule",
-        "color": "black",
-        "strokeWidth": 2
-      },
-      "encoding": {
-        "x": { "value": 175 }, 
-        "x2": { "value": 235 },
-        "y": { "value": 90 },
-        "y2": { "value": 65 } 
-      }
+      "calculate": "datum['Education Type'] === 'Secondary' ? datum['Number of Students'] : -datum['Number of Students']",
+      "as": "signed_students"
     }
   ],
+  "mark": "bar",
+  "encoding": {
+    "y": {
+      "field": "School Type",
+      "type": "ordinal",
+      "axis": {
+        "title": " "
+      },
+      "sort": [
+        "Government",
+        "Catholic",
+        "Other non-Government"
+      ]
+    },
+    "x": {
+      "field": "signed_students",
+      "type": "quantitative",
+      "title": "Number of Students",
+      "axis": {
+        "format": ",",
+        "labelExpr": "abs(datum.value) / 1000000 + 'M'"
+      },
+      "scale": {
+        "domain": [-1500000, 1500000]
+      }
+    },
+    "color": {
+      "field": "Education Type",
+      "scale": {
+        "domain": ["Primary", "Secondary"],
+        "range": ["#b7e396", "#9ADAEF"]
+      },
+      "legend": {
+        "orient": "top-right",
+        "title": "Education Type"
+      }
+    },
+    "tooltip": [
+      {
+        "field": "Education Type",
+        "title": "Education Type"
+      },
+      {
+        "field": "School Type",
+        "title": "School Type"
+      },
+      {
+        "field": "Number of Students",
+        "title": "Number of Students",
+        "type": "quantitative",
+        "format": ","
+      }
+    ]
+  },
   "config": {
-    "view": {"stroke": null},
-    "axis": {"grid": false}
+    "view": {
+      "stroke": null
+    },
+    "axis": {
+      "grid": false
+    }
   }
 }
