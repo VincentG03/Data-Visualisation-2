@@ -47,7 +47,7 @@
           "sort": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"],
           "scale": {
             "domain": ["Certificate", "Diploma", "Bachelor Degree", "Graduate Diploma", "Postgraduate Degree"], 
-            "range": ["#779AED", "#8AD172 ", "#E4DA7A", "#F6A974", "#F0727C"] 
+            "range": ["#779AED", "#8AD172 ", "#bfb21f", "#F6A974", "#F0727C"] 
           }
         },
         "tooltip": [

@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "title": {
-    "text": "Distribution of Qualification Types in Australia",
+    "text": "Qualification Types in Australia",
     "offset": 30,
     "fontSize": 20
   },
