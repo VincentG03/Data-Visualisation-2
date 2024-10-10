@@ -1,5 +1,5 @@
-var vg_1 = "chart/T1_groupedbar.vg.json"; // FILE_NAME.vg.json
-vegaEmbed("#T1_groupedbar", vg_1).then(function(result) { //INDEX_HTML reference
+var vg_1 = "chart/T1_groupedbar.vg.json"; 
+vegaEmbed("#T1_groupedbar", vg_1).then(function(result) { 
 }).catch(console.error);
 
 

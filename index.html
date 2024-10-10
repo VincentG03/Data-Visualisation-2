@@ -4,23 +4,29 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Reference the css file -->
     <link rel="stylesheet" href = "styles.css">
+
+    <!-- Import the "Lato" font -->
     <link href='https://fonts.googleapis.com/css?family=Lato:400,700' rel='stylesheet' type='text/css'>
 
+    <!-- Import vega-lite -->
     <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-lite@5"></script>
     <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
     <script src="charts.js"></script>
 </head>
+
 <body>
     <main class = "grid_container"> 
-        <!-- Title Section -->
+        <!-- Title -->
         <div>
-            <h1>Education Demographics in Australia</h1>
+            <h1 class = "title">Education Demographics in Australia</h1>
             <h3 class = "subtitle">Understanding Australia's Educational Landscape and the Citizens Who Engage with It.</h3>
         </div>
 
-        <!-- Introduction Section -->
+        <!-- Introduction -->
         <div> 
             <p class = "description">
                 As of the 2021 Census, over <b>5.5 million</b> people held a bachelor's degree, a 31% rise since 2016, with Business and Management 
@@ -32,12 +38,13 @@
             </p>
         </div>
 
-        <!-- "Choropleth" Section -->
+        <!-- Choropleth Chart -->
         <div id="T3_choropleth"></div>
 
-        <!-- Pie chart -->
+        <!-- Pie Chart -->
         <div id="T6_pie"></div>
 
+        <!-- Description: Choropleth Chart -->
         <div>
             <p class="description"> 
                 Overall, <b>New South Wales is home to nearly one-third</b> of all qualification holders in Australia, making it a significant contributor to the 
@@ -47,6 +54,7 @@
             </p>
         </div>
 
+        <!-- Description: Pie Chart -->
         <div>
             <p class = "description">
                 In Australia, the <b>most common qualifications</b> are <span style="color: #779AED; font-weight: bold;">certificates</span> and <span style="color: #E4DA7A; font-weight: bold;">bachelor's degree</span>, held by <b>34.8%</b> and <b>31.7%</b> of qualification holders, 
@@ -56,15 +64,19 @@
             </p>
         </div>
 
-        <!-- "Education By Characteristics" Section -->
+        <!-- Header -->
         <div>
-            <h2>Education by Characteristics</h2>
+            <h2 class = "header">Education by Characteristics</h2>
             <h3 class = "subtitle">Examining the Educational Characteristics Across Demographic Groups.</h3>
         </div>
 
+        <!-- Percentaged Stacked Bar Chart -->
         <div id="T8_stackedbar"></div>
+
+        <!-- Grouped Bart Chart -->
         <div id="T1_groupedbar"></div>
         
+        <!-- Description: Percentaged Staced Bar Chart -->
         <div>
             <p class = "description">
                 On average, <b>most qualifications</b> are <b>predominantly held</b> by individuals <span style="color: #84d1ba; font-weight: bold;">born in Australia</span>, covering all qualification levels listed  
@@ -73,6 +85,8 @@
                 seeking further qualifications to enhance their career prospects. 
             </p>
         </div>
+
+        <!-- Description: Grouped Bar Chart -->
         <div>
             <p class = "description">
                 <span style="color: #c7c6b9; font-weight: bold;">Government schools</span> outnumber both <span style="color: #b7e396; font-weight: bold;">catholic</span> and <span style="color: #9ADAEF; font-weight: bold;">other non-government schools</span>, with more than <b>double the number of secondary schools</b> 
@@ -83,14 +97,16 @@
         </div>
 
 
-        <!-- "Education by Study Field" Section -->
+        <!-- Header -->
         <div>
-            <h2>Education by Study Field</h2>
+            <h2 class = "header">Education by Study Field</h2>
             <h3 class = "subtitle">Insights into the Distribution of Study Fields Across Citizens' Demographics.</h3>
         </div>
 
+        <!-- Horizontal Stacked Bar Chart -->
         <div id="T4_horzstackedbar"></div>
 
+        <!-- Description: Horizontal Stacked Bar Chart -->
         <div>
             <p class = "description">
                 <br>
@@ -106,6 +122,7 @@
             </p>
         </div>
 
+        <!-- Description: Grouped Bar Chart -->
         <div> 
             <p class="description">
                 Overall, <span style="color: #E4DA7A; font-weight: bold;">bachelor's degree</span> and <span style="color: #779AED; font-weight: bold;">certificates</span> emerge as the <b>most prevalent qualifications</b> across <b>nearly all income groups</b>, with the 
@@ -122,16 +139,16 @@
             </p>
         </div>
 
+        <!-- Grouped Bar Chart -->
         <div id="T11_groupedbar"></div>
 
+        <!-- Footer -->
         <div>
             © Vincent Giang 2024 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; A visualisation created by <b>Vincent Giang</b> using Vega-Lite 
             &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Last Updated 7 October 2024 &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; Data provided by the 
             <b>Australian Bureau of Statistics</b> &nbsp;&nbsp;&nbsp;|&nbsp;&nbsp;&nbsp; ChatGPT (GPT-3.5) was utilised to improve the 
             wording of specific text segments   
         </div>
-
-
     </main>
 </body>
 </html>
